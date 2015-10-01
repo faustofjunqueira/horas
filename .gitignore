@@ -41,3 +41,21 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Node-Webkit
+d3dcompiler_47.dll
+ffmpegsumo.dll
+icudtl.dat
+libEGL.dll
+libGLESv2.dll
+nw.exe
+nw.pak
+nwjc.exe
+pdf.dll
+locales
+
+#bower lib
+src/lib
+
+#node lib
+node_modules

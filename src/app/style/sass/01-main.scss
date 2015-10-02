@@ -1,0 +1,10 @@
+$color-gray: #969696;
+$border-tiny: 1px solid $color-gray;
+
+
+body {
+	width: 960px;
+	height: 410px;
+	border: $border-tiny;
+}
+

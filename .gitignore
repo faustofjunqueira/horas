@@ -59,3 +59,6 @@ src/lib
 
 #node lib
 node_modules
+
+#sass
+src/app/style/horas.min.css

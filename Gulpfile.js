@@ -1,9 +1,16 @@
+'use strict';
+
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
- 
+
+var sass = require('gulp-sass');
+
+var app_dir = './src/app/';
+
+/* 
 // Definimos o diretorio dos arquivos para evitar repetição futuramente
 var files = "./src/*.js";
  
@@ -25,18 +32,33 @@ gulp.task('dist', function() {
 	// Renomeamos o arquivo que sera minificado e logo depois o minificamos com o `uglify`
 	// E pra terminar usamos o `gulp.dest` para colocar os arquivos concatenados e minificados na pasta build/
 	gulp.src(files)
-		.pipe(concat('./dist'))
-		.pipe(rename('dist.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist'));
+	 .pipe(concat('./dist'))
+	 .pipe(rename('dist.min.js'))
+	 .pipe(uglify())
+	 .pipe(gulp.dest('./dist'));
 });
- 
+
+*/
+
+var style_dir = app_dir + 'style/',
+	sass_dir = style_dir + 'sass/',
+	sass_file = sass_dir + '*.scss',
+	sass_dest = style_dir;
+gulp.task('sass', function(){
+	gulp.src(sass_file)
+	 .pipe(concat(sass_dir))
+	 .pipe(rename('horas.min.css'))
+	 .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	 .pipe(gulp.dest(sass_dest));
+});
+
 //Criamos uma tarefa 'default' que vai rodar quando rodamos `gulp` no projeto
 gulp.task('default', function() {
 	// Usamos o `gulp.run` para rodar as tarefas
 	// E usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
-	gulp.run('lint', 'dist');
+/*	gulp.run('lint', 'dist');
 	gulp.watch(files, function(evt) {
 		gulp.run('lint', 'dist');
-	});
-});
+	});*/
+	gulp.watch(sass_file, ['sass']);
+}); 

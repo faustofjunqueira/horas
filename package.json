@@ -4,8 +4,8 @@
   "window": {
     "title": "Radix Horas Estagio",
     "toolbar": true,
-    "frame": true,
-    "resizable": true,
+    "frame": false,
+    "resizable": false,
     "width": 960,
     "height": 410,
     "position": "center"

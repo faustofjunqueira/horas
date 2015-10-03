@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300);*/
 
 $color-gray: #E4E4E4;
+$color-gray-dark: #1a1a1a;
 $border-tiny: 1px solid $color-gray;
 
-*{
+/*{
 	font-family: 'Roboto', sans-serif;
-}
+}*/
 
 .no-margin{
 	margin: 0;
@@ -25,16 +26,22 @@ body {
 
 /*botoes de fechar e minimizar*/
 .hc {
-	margin: 0 5px;
+	background-color: $color-gray-dark;
+	-webkit-app-region: drag;
+	margin: 0;
+	padding: 0 5px;
 
 	.hc-buttons {
+		-webkit-app-region: no-drag;
 		.btn {
+			background-color: $color-gray-dark;
 			margin: 0;
 			border: none;
 			border-radius: 0;
+			color: white;
 		}
-		.hc-close:hover{
-			background-color: #d9534f;
+
+		.btn:hover{
 			color: white;
 		}
 	}

@@ -1,10 +1,49 @@
-$color-gray: #969696;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300);
+
+$color-gray: #E4E4E4;
 $border-tiny: 1px solid $color-gray;
 
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.no-margin{
+	margin: 0;
+}
+
+.no-padding{
+	padding: 0;
+}
 
 body {
 	width: 960px;
 	height: 410px;
 	border: $border-tiny;
+	padding: 0;
+	overflow: hidden;
 }
 
+/*botoes de fechar e minimizar*/
+.hc {
+	margin: 0 5px;
+
+	.hc-buttons {
+		.btn {
+			margin: 0;
+			border: none;
+			border-radius: 0;
+		}
+		.hc-close:hover{
+			background-color: #d9534f;
+			color: white;
+		}
+	}
+}
+
+section.row{
+	@extend .no-margin;
+}
+
+.col-md-1{
+	border: 1px solid black;
+}

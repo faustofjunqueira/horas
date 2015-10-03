@@ -54,6 +54,15 @@ nwjc.exe
 pdf.dll
 locales
 
+icudtl.dat
+libffmpegsumo.so
+nw
+nwjc
+nw.pak
+credits.html
+
+
+
 #bower lib
 src/lib
 
@@ -62,3 +71,6 @@ node_modules
 
 #sass
 src/app/style/horas.min.css
+
+#Webstorm
+.idea

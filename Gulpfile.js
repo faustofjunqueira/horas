@@ -8,7 +8,7 @@ var rename = require('gulp-rename');
 
 var sass = require('gulp-sass');
 
-var app_dir = './src/app/';
+var app_dir = 'src/app/';
 
 /* 
 // Definimos o diretorio dos arquivos para evitar repetição futuramente

@@ -1,21 +1,27 @@
 {
-	"name": "radix-hora",
-	"version": "0.0.1",
-	"authors": [
-		"Fausto Junqueira <https://github.com/faustofjunqueira>"
-	],
-	"description": "software para controle de hora",
-	"main": "assets/scripts/main.js",
-	"keywords": [
-		"radix", "hora"
-	],
-	"license": "MIT",
-	"private": true,
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	]
+  "name": "radix-hora",
+  "version": "0.0.1",
+  "authors": [
+    "Fausto Junqueira <https://github.com/faustofjunqueira>"
+  ],
+  "description": "software para controle de hora",
+  "main": "assets/scripts/main.js",
+  "keywords": [
+    "radix",
+    "hora"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
 }

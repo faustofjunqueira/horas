@@ -1,18 +1,24 @@
-angular.module('horas-app').directive('toolbarWindow',function(){
+angular.module('horas-app').directive('toolbarWindow',['viewPath', function(viewPath){
 	return {
 		transclude: false,
-		templateUrl: 'app/view/directive/toolbarWindow.html',
+		templateUrl: viewPath.directive + 'toolbarWindow.html',
 		restrict: 'E',
-		scope: {
-		},
+		scope: {},
 		link: function( scope, element, attrs, ctrl) {
-
-			function close_application() {
+			
+			function closeApplication() {
 				window.close();
 			}
 
-			var jQueryButtonClose = element.find('.hc-close');
-			jQueryButtonClose.on('click',close_application);
+			function minimizeApplication() {
+				var gui = require('nw.gui');
+				var win = gui.Window.get();
+				win.minimize();
+			}
+			
+			scope.closeApplication = closeApplication;
+			scope.minimizeApplication = minimizeApplication;
+
 		}
 	};
-});
+}]);

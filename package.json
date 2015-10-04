@@ -3,7 +3,7 @@
   "main": "app://host/src/index.html",
   "window": {
     "title": "Radix Horas Estagio",
-    "toolbar": true,
+    "toolbar": false,
     "frame": false,
     "resizable": false,
     "width": 960,

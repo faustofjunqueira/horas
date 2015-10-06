@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300);
 
 $color-gray: #E4E4E4;
-$color-gray-dark: #1a1a1a;
+/*$color-gray-dark: #1a1a1a;*/
+$color-gray-dark: #337ab7;
 $border-tiny: 1px solid $color-gray;
 
 *{
@@ -14,6 +15,10 @@ $border-tiny: 1px solid $color-gray;
 
 .no-padding{
 	padding: 0;
+}
+
+.btns-entrada {
+	margin-top: 80px;
 }
 
 body {
@@ -58,4 +63,19 @@ section.row{
 .hour-prime{
 	font-size: 75px;
 	font-weight: 100;
+}
+
+.btn-primary {
+	border-radius: 0;
+}
+
+
+#toast-container > div {
+	border-radius: 0;
+}
+
+.btns-entrada {
+	.btn {
+		margin: 10px;
+	}
 }

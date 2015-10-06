@@ -1,0 +1,15 @@
+<painel-hour></painel-hour>
+<div class="text-center btns-entrada">
+	<button class="btn btn-primary btn-lg" ng-repeat="transaction in currentState.transactions" ng-click="clickTransaction(transaction)">
+		{{transaction.exibitionName}}
+	</button>
+	<div ng-show="resumeDay">
+		<h1>Tenha um bom descanço</h1>
+		<span>
+			<b>Tempo de trabalho:</b>
+			<span ng-show="resumeDay.hour">{{resumeDay.hour}} horas </span>
+			<span ng-show="resumeDay.minute">{{resumeDay.minute}} minutos </span>
+			<span ng-show="resumeDay.second">{{resumeDay.second}} segundos </span>
+		</span>
+	</div>
+</div>

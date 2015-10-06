@@ -5,14 +5,14 @@ angular.module('horas-app').directive('toolbarWindow',['viewPath', function(view
 		restrict: 'E',
 		scope: {},
 		link: function( scope, element, attrs, ctrl) {
+			var gui = require('nw.gui');
+			var win = gui.Window.get();
 			
 			function closeApplication() {
-				window.close();
+				win.close();
 			}
 
 			function minimizeApplication() {
-				var gui = require('nw.gui');
-				var win = gui.Window.get();
 				win.minimize();
 			}
 			

@@ -5,6 +5,7 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
+var ngmin = require('gulp-ngmin');
 
 var sass = require('gulp-sass');
 var dist_dir = 'src/dist/'
@@ -17,12 +18,13 @@ gulp.task('lint', function() {
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'));
 });
- 
+
 gulp.task('dist', function() {
 	gulp.src(jsfiles)
 	 .pipe(concat('horas.js'))
-	 .pipe(rename('horas.min.js'))
-	 .pipe(uglify())
+	 .pipe(rename({suffix: '.min'}))
+	 .pipe(ngmin())
+	 .pipe(uglify({mangle: false}))
 	 .pipe(gulp.dest(dist_dir));
 });
 

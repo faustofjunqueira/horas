@@ -1,0 +1,1 @@
+function (){return this.restHour.length?1==this.restHour.length?dateDiff(this.restHour[0]["in"],this.restHour[0].out).total.milisecond:this.restHour.reduce(function(total,x){return total+dateDiff(x["in"],x.out).total.milisecond},0):0}
